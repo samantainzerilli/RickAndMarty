@@ -1,3 +1,24 @@
 .colorletra{
-    color: white;
+    
+    font-family: monospace;
+    font-size: 17px; 
+        display: flex;
+      align-items: center;
+      justify-content: flex-start;
+        color:aliceblue;
+        background-color: rgba(66, 236, 102, 0.32);
+        margin-top: 90px;
+        flex-direction: column;
+        text-orientation: upright; 
+        max-width: 900px;
+        border-radius: 1%;
+   
+        margin-left: 100px;
+}
+
+.color{
+    font-size: 80px; 
+    font-family: monospace;
+    color:aliceblue;
+    max-width: 74%;
 }

@@ -1,0 +1,26 @@
+.cardD{
+    display: flex;
+  align-items: center;
+  justify-content: flex-start;
+    color:aliceblue;
+    background-color: rgba(66, 236, 102, 0.32);
+    margin-top: 200px;
+  }
+
+  .text {
+
+    font-family: monospace;
+    font-size: 20px; 
+
+  }
+  
+  .image {
+    width: 25%;
+    margin-right: 10px;
+    border-radius: 90%;
+   
+    margin-left: 100px;
+
+    
+  }
+

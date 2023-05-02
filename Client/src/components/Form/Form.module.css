@@ -1,10 +1,13 @@
 .contenedor {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: relative;
+  height: 100vh;
+  max-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; 
+}
   
   .contenedor::before {
     content: "";
@@ -19,6 +22,8 @@
     background-repeat: no-repeat;
     z-index: 1;
   }
+
+  
   
   .contenedor::after {
     content: ""; 
@@ -37,9 +42,12 @@
   }
   
   .formulario {
-    max-width: 200px;
+    max-width: 100%;
     margin: 0 auto;
     margin-top: -10px;
+    max-height: 30vh;
+    width: 80%;
+    max-width: 200px; 
   }
   
   .boton {

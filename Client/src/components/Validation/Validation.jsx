@@ -1,3 +1,5 @@
+import style from './Validation.module.css'
+
 const validation=(userData)=>{
     const errors={};
 

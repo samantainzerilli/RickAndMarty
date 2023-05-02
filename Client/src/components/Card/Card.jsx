@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import style from "./Card.module.css"
-import { Connect, connect } from "react-redux";
+import { connect } from "react-redux";
 import { addFavorite, removeFavorite } from "../../redux/action";
 import { useState, useEffect } from "react";
 
  function Card({id, name, status, species, gender, origin, image, onClose, addFavorite, removeFavorite, myFavorites}) {
    const [isFav, setIsFav]= useState (false);
+   const [isFavoritesRoute, setIsFavoritesRoute] = useState(false);
     const routes= '/'
   const handleFavorite=()=>{
    if(isFav){
@@ -25,12 +26,12 @@ import { useState, useEffect } from "react";
 
   useEffect(() => {
    myFavorites.forEach((fav) => {
-      if (fav.id === id) {
-         setIsFav(true);
-      }
+     if (fav.id === id) {
+       setIsFav(true);
+     }
    });
-}, [myFavorites]);
-   
+   setIsFavoritesRoute(window.location.pathname === '/favorites');
+ }, [myFavorites]);
    return (
       <div className={style.position}>
          <Link to={`/detail/${id}`} className={style.link}>
@@ -50,9 +51,7 @@ import { useState, useEffect } from "react";
     ) : (
       <button  className={style.favBoton} onClick={handleFavorite}>🤍</button>
     )}
-    <button className={style.closeButton} onClick={() => onClose(id)}>
-      X
-    </button>
+ {isFavoritesRoute || <button className={style.closeButton} onClick={() => onClose(id)}> X </button>}
   </div>
         </div>
        </div>
